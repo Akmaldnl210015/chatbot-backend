@@ -232,7 +232,7 @@ app.get('/health', (req, res) => {
 app.listen(port, () => {
   console.log('🚀 Server running on port', port);
   console.log('📖 Specializing in NOVEL recommendations (fiction only)');
-  console.log('🤖 Using Gemini 1.5 Flash for AI recommendations');
+  console.log('🤖 Using Gemini 2.5 Flash for AI recommendations');
   console.log('✨ Ready to recommend novels!');
   console.log(`\n💡 Test: curl -X POST http://localhost:${port}/api/recommend -H "Content-Type: application/json" -d '{"query":"mystery novel"}'\n`);
 });
