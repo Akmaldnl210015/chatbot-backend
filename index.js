@@ -14,7 +14,7 @@ app.use(express.json());
 // ========================================
 async function analyzeConversation(conversationHistory) {
   const apiKey = process.env.GEMINI_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
   
   const prompt = `You are a sophisticated book recommendation assistant. Analyze the conversation to decide the next step.
 
@@ -196,7 +196,7 @@ Categories: ${info.categories?.join(', ') || 'Fiction'}`;
 // ========================================
 async function getGeminiRecommendation(analysis, booksData) {
   const apiKey = process.env.GEMINI_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
   
   const pubText = analysis.preferences.publication === 'recent' ? 'recent (2020+)' : 
                   analysis.preferences.publication === 'classic' ? 'older classics (pre-2010)' : 
