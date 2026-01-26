@@ -182,7 +182,7 @@ function filterNovelsOnly(books) {
     const categories = info.categories || [];
     const categoriesString = categories.join(' ').toLowerCase();
     
-    const fictionKeywords = ['fiction', 'novel', 'romance', 'mystery', 'thriller', 'fantasy', 'science fiction'];
+    const fictionKeywords = ['fiction', 'novel', 'romance', 'mystery', 'thriller', 'fantasy', 'science fiction', 'horror', 'adventure'];
     const nonFictionKeywords = ['non-fiction', 'biography', 'self-help', 'textbook', 'history'];
     
     const hasFiction = fictionKeywords.some(k => categoriesString.includes(k));
